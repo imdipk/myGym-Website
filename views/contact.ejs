@@ -1,39 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="../static/style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-        </style>
-
-</head>
 <body>
-    <nav id="navbar">
-        <img src="../static/img/logo.png" id="logoImg" alt="Loading">
-        <ul>
-            <li><a href="/">Home </a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    </nav>
     <section id="contact">
         <h1 class="section-heading">Contact Us</h1>
-        <form action="/contact" method = "POST" id="contact-form">
+        <form action="/contact" method="POST" id="contact-form">
             <input type="name" name="name" class="myInput" id="name" placeholder="Enter your Name">
             <input type="email" name="email" class="myInput" id="email" placeholder="Enter your Email">
             <input type="number" name="phone" class="myInput" id="phone" placeholder="Enter your Number">
-            <textarea name="message" class="myInput" id="textarea" placeholder="Enter your Message" cols="30" rows="10"></textarea>
-            <button id="contactBtn"  type="submit" class="btn">Submit</button>
+            <textarea name="message" class="myInput" id="textarea" placeholder="Enter your Message" cols="30"
+                rows="10"></textarea>
+            <button id="contactBtn" type="submit" class="btn">Submit</button>
         </form>
     </section>
-    <footer>
-        Copyright &copy; all rights reserved
-    </footer>
-
+    <div id="contact-icon">
+        <i class="fas fa-phone fa-3x icon"><span style="font-size: 50%;">+919876543210</span></i>
+        <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter fa-3x icon"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square fa-3x icon"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-3x icon"></i></a>
+    </div>
 </body>
-</html>

@@ -6,21 +6,18 @@
     color: black;
     font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
-
 }
 body{
     background-color: rgb(211, 206, 206) ;
-
 }
-
-
-
 #navbar{
     display: flex;
     position: sticky;
     align-items: center;
-    background-color: rgb(22, 24, 22);
+    top: 0;
     width: 100%;
+    z-index: 999;
+    background-color: black;
 }
 #logoImg{
     width: 80px;
@@ -32,24 +29,24 @@ nav ul{
 nav ul li{
     list-style: none;
     margin: 10px 15px;
-    border-radius: 5px ;
+    padding: 8px 10px;
 }
 nav ul li a{
     text-decoration: none;
-    padding: 0px 10px;
     font-size: 1.3rem;
     color: white;
-
+    padding-bottom: 10px;
 }
 
-nav ul li a:hover{
+nav ul li  a:hover{
     color: red;
-    text-decoration: underline;
 }
-nav ul li a:active{
-    color:yellow;
+nav ul li a.active{
+    color:red;
+    border-bottom: 5px solid red;
+    font-weight: 700;
+    letter-spacing: 1.8px;
 }
-
 
 /* Home Section */
 #home ::before{
@@ -58,7 +55,7 @@ nav ul li a:active{
     position: absolute;
     left: 0;
     top: 0;
-    height: 110vh;
+    height: 100vh;
     width: 100%;
     z-index: -1;
     opacity: 0.8;
@@ -72,7 +69,6 @@ nav ul li a:active{
     justify-content: center;
     align-items: center;
 }
-
 .sub-head{
    background-color: black;
    display: inline;
@@ -81,7 +77,6 @@ nav ul li a:active{
    font-size: 1.6rem;
    padding: 12px 18px;
    margin: 70px auto;
-   /* margin-top: 100px; */
    border: 2px solid black;
 }
 .homeTxt3 img{
@@ -91,7 +86,6 @@ nav ul li a:active{
     right: 0;
     z-index: -2;
 }
-
 .homeTxt1{
     display:flex;
     flex-direction: column;
@@ -116,18 +110,17 @@ nav ul li a:active{
 .homeTxt2 h4{
     color: white;
 }
+
 /* About Section */
 #about p{
     font-size: 1.3rem;
     padding: 25px 90px;
-
 }
 
 /* Services Section */
 #services{
     position: relative;
 }
-
 h2{
     color: yellow;
 }
@@ -159,22 +152,13 @@ h2{
 #services-container .sec{
     display: flex;
     justify-content: center;
-    /* margin: 2px 120px; */
-    /* border: 2px solid black; */
-
 }
-
 #services-container h2{
     font-size: 2rem;
     text-align: center;
     margin: 35px 0px;
     margin-bottom:0px;
 }
-
-
-
-
-
 
 /* Contact Us */
 #contact{
@@ -208,6 +192,15 @@ h2{
     font-weight: bolder;
     color:black;
 }
+#contact-icon{
+    display: inline-block;
+    width: 100%;
+    margin-top: 45px;
+    text-align: center;
+}
+.icon{
+    margin: 10px 20px;
+}
 .btn{
     color: white;
     font-size: 1.1rem;
@@ -223,15 +216,15 @@ h2{
 .btn:hover{
     background-color: #50a13c;
 }
-
-
 footer{
     color: white;
     background-color: black;
     width: 100%;
     margin: 10px auto;
+    margin-bottom: 0;
     padding: 10px 0px;
     text-align: center;
+    bottom: 0;
 }
 .section-heading{
     color: green;
@@ -241,77 +234,70 @@ footer{
     padding: 10px 20px;
     padding-top: 45px;
 }
-
-#main ::before
-    {   
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-	    margin:0px;
-        background: url('img/signin.jpg')no-repeat fixed center/cover;
-	    color:#f9fcf5;
-	    font-family:Arial, Helvetica, sans-serif;
-        z-index: -10;
+#main ::before{   
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+	margin:0px;
+    background: url('img/signin.jpg')no-repeat fixed center/cover;
+	color:#f9fcf5;
+	font-family:Arial, Helvetica, sans-serif;
+    z-index: -10;
         
+}
+/* Sign In Page */
+#main{
+    margin: 80px 2px;
+    padding: 20px;
+    border-radius:5px;
+    overflow:hidden;
+    border-top:3px double #f1f1f1;
+    border-bottom:3px double #f1f1f1;
+}
+#main td{
+    font-size: 20px;
+}
+.login-name{
+    font-weight: 900;
+    color:rgb(234, 252, 169);
+}
+#main .tb{
+    border: 3px solid black;
+    width: 80%;
+    margin: 8px 20px;
+    padding: 10px;
+    border-radius: 25px;
+    outline: none;
+    font-weight: bolder;
+    color:black;
     }
-    
-    #main{
-        margin: 80px 2px;
-        padding: 20px;
-        
-         border-radius:5px;
-         overflow:hidden;
-         border-top:3px double #f1f1f1;
-         border-bottom:3px double #f1f1f1;
-    }
-    #main td{
-        font-size: 20px;
-        
-    }
-    .login-name{
-        font-weight: 900;
-        color:rgb(234, 252, 169);
-    }
-    
-    #main .tb{
-        border: 3px solid black;
-        width: 80%;
-        margin: 8px 20px;
-        padding: 10px;
-        border-radius: 25px;
-        outline: none;
-        font-weight: bolder;
-        color:black;
-    }
-    #main .btn{
-        width:150px;
-        height:32px;text-shadow: 0px 0.5px 0.5px #fff;font-size:14px;
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        transition: 1s;
-        color: white;
-        width: 120px;
-        padding: 5px;
-        margin: 0;
-        box-shadow: 1.8px 1.8px 1px tomato;
-        cursor: pointer;
-        border-radius: 8px;
-        outline: none;
-        background-color: green;
-    }
-  
-    #main .btn:hover{background-color:#f26724;
-         outline:none;
-          border-radius: 2px;
-         color:#f1f1f1;
-         border:1px solid #f1f1f1;
-
-        -webkit-transition: 1s;
-         -moz-transition: 1s;
-         transition: 1s;
+#main .btn{
+    width:150px;
+    height:32px;text-shadow: 0px 0.5px 0.5px #fff;font-size:14px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+    color: white;
+    width: 120px;
+    padding: 5px;
+    margin: 0;
+    box-shadow: 1.8px 1.8px 1px tomato;
+    cursor: pointer;
+    border-radius: 8px;
+    outline: none;
+    background-color: green;
+}
+#main .btn:hover{background-color:#f26724;
+    outline:none;
+    border-radius: 2px;
+    color:#f1f1f1;
+    border:1px solid #f1f1f1;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
  }
 @media screen and (max-width: 1260px ) {
     .homeTxt2, .homeTxt1{
@@ -327,7 +313,6 @@ footer{
         flex-direction: column;
         align-items: center;
     }
-    
     #services-container li{
         color: black;
         padding: 0px;
